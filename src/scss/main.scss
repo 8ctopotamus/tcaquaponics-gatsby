@@ -1,0 +1,41 @@
+
+$primary: #316589;
+
+a {
+  color: $primary;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  // background: #E9D240;
+  background: #f2f2f2;
+  width: 260px;
+  height: 100%;
+  text-align: center;
+  font-size: 1em;
+
+  a {
+    display: block;
+    font-size: 2rem;
+    padding: 10px;
+    text-decoration: none;
+    color: $primary;
+    font-weight: bold;
+    &.current {
+      background: white;
+    }
+  }
+
+  img {
+    max-width: 18 0px;
+  }
+}
+
+#site-content {
+  padding: 25px 50px 50px 285px;
+}
