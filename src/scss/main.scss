@@ -1,8 +1,21 @@
 
 $primary: #316589;
+$primaryDark: #34434d;
+$accent: #E9D240;
+$lightgrey: #f2f2f2;
+$navWidth: 260px;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: $primary;
+}
 
 a {
   color: $primary;
+}
+
+.has-background-color {
+  color: white;
 }
 
 .text-center {
@@ -12,9 +25,8 @@ a {
 .navbar {
   overflow: hidden;
   position: fixed;
-  // background: #E9D240;
-  background: #f2f2f2;
-  width: 260px;
+  background: $lightgrey;
+  width: $navWidth;
   height: 100%;
   text-align: center;
   font-size: 1em;
@@ -24,18 +36,60 @@ a {
     font-size: 2rem;
     padding: 10px;
     text-decoration: none;
-    color: $primary;
+    color: $primaryDark;
     font-weight: bold;
     &.current {
-      background: white;
+      background: #4e89b3;
+      color: $lightgrey;
     }
   }
 
   img {
-    max-width: 18 0px;
+    max-width: 192px;
   }
 }
 
-#site-content {
-  padding: 25px 50px 50px 285px;
+#content-wrap {
+  padding-left: $navWidth;
+  main {
+    background: white;
+    padding: 60px 30px;
+    margin: 0 60px;
+  }
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #38576d;
+  background-image: url(../images/banner.jpg);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  padding-left: 60px;
+  padding-right: 60px;
+  .title {
+    display: block;
+    width: 100%;
+    color: $primaryDark;
+    font-weight: bold;
+    background: rgba(255, 255, 255, .7);
+    padding: 30px;
+    text-transform: uppercase;
+    line-height: 30px;
+    margin: 0 !important;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+}
+
+#site-footer {
+  color: $accent;
+  padding: 60px;
+}
+
+form {
+  width: 100%;
 }

@@ -6,5 +6,6 @@
 
 import 'skeleton-css/css/normalize.css'
 import 'skeleton-css/css/skeleton.css'
+import 'animate.css'
 import './src/scss/gutenberg-blocks.scss'
-import "./src/scss/main.scss"
+import './src/scss/main.scss'

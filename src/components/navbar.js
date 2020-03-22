@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
+import { parseHTMLCodes } from '../utils'
 import logo from '../images/logo.svg'
 
 export default () => (
   <StaticQuery
     query={graphql`
       query {
-        allWordpressPage(sort: { fields: wordpress_id }, limit: 5) {
+        allWordpressPage(sort: { fields: wordpress_id }, limit: 6) {
           edges {
             node {
               title
@@ -29,7 +30,7 @@ export default () => (
               to={edge.node.slug}
               key={edge.node.slug}
             >
-              {edge.node.title}
+              {parseHTMLCodes(edge.node.title)}
             </Link>
           ))}
         </div>
