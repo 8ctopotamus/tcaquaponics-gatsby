@@ -1,4 +1,3 @@
-
 $primary: #316589;
 $primaryDark: #34434d;
 $accent: #E9D240;
@@ -91,5 +90,11 @@ a {
 }
 
 form {
+  background: $lightgrey;
+  padding: 30px;
+}
+
+input,
+textarea {
   width: 100%;
 }

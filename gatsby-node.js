@@ -37,8 +37,13 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const pageTemplate = path.resolve(`./src/templates/page.js`)
   allWordpressPage.edges.forEach(edge => {
+    // home page
+    const path = edge.node.slug === 'twin-cities-aquaponics'
+      ? `/`
+      : `/${edge.node.slug}/`
+
     createPage({
-      path: `/${edge.node.slug}/`,
+      path,
       component: slash(pageTemplate),
       context: {
         id: edge.node.id,

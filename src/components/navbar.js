@@ -23,16 +23,19 @@ export default () => (
           <img src={logo} alt="Twin Cities Aquaponics" />
         </Link>
         <div className="navbar-start">
-          {data.allWordpressPage.edges.map(edge => (
-            <Link
-              className="navbar-item"
-              activeClassName="current"
-              to={edge.node.slug}
-              key={edge.node.slug}
-            >
-              {parseHTMLCodes(edge.node.title)}
-            </Link>
-          ))}
+          {data.allWordpressPage.edges.map(({ node }) => {
+            return node.slug !== 'twin-cities-aquaponics'
+              ? (
+                <Link
+                  className="navbar-item"
+                  activeClassName="current"
+                  to={node.slug}
+                  key={node.slug}
+                >
+                  {parseHTMLCodes(node.title)}
+                </Link>
+              ) : null
+          })}
         </div>
         <div className="navbar-end"></div>
       </nav>
