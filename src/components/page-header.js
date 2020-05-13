@@ -13,5 +13,3 @@ export default ({
     <h1 class="title">{ parseHTMLCodes(title) }</h1>
   </div>
 )
-
-
